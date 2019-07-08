@@ -1,0 +1,55 @@
+ion-content{
+    
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+    align-items: stretch;
+
+}
+
+ion-grid{
+    justify-content: space-around;
+    height: 100%;
+    ion-row{
+        height: 14.28571428%;
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        right: 0 !important;
+    
+        ion-button{
+            height: 100%;
+            position: relative;
+            background-size: cover;
+            
+            img{
+                display: flex;
+                justify-content: center; /* align horizontal */
+                align-items: center; /* align vertical */
+                height: 60px;
+                width:  100px;
+            }
+        
+            .animales{
+                display: flex;
+                justify-content: center; /* align horizontal */
+                align-items: center; /* align vertical */
+                height: 60px;
+                width:  280px;
+            }
+
+            .listaAnimales{
+                display: flex;
+                justify-content: center; /* align horizontal */
+                align-items: center; /* align vertical */
+                height: 82px;
+                width:  82px;
+            }
+                
+        }
+
+    }
+
+}
+
+
+

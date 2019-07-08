@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/menu"></ion-back-button>
+          </ion-buttons>
+      <ion-title>Animales</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+
+    <ion-card (click)="cambiarIdioma()"> 
+        <ion-card-header>
+          <ion-card-title>Cambiar Idioma</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <img *ngIf="idioma == 1"  no-margin no-padding src="../../assets/espana.png">
+            <img *ngIf="idioma == 2"  no-margin no-padding src="../../assets/inglaterra.svg">
+            <img *ngIf="idioma == 3"  no-margin no-padding src="../../assets/alemania.svg">
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+          <ion-card-header>
+              <ion-card-title>Elija un animal</ion-card-title>
+            </ion-card-header>
+
+        <ion-card-content>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card (click)="reproducir('vaca')">
+        <ion-card-content>
+            <ion-img src="../../assets/Vaca.png"></ion-img>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card (click)="reproducir('caballo')">
+          <ion-card-content>
+              <ion-img src="../../assets/Caballo.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card (click)="reproducir('gallo')">
+            <ion-card-content>
+                <ion-img src="../../assets/Gallo.png"></ion-img>
+            </ion-card-content>
+          </ion-card>
+
+
+            <ion-card (click)="reproducir('oveja')">
+                <ion-card-content>
+                    <ion-img src="../../assets/Oveja.png"></ion-img>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card (click)="reproducir('pato')">
+                  <ion-card-content>
+                      <ion-img src="../../assets/Pato.png"></ion-img>
+                  </ion-card-content>
+                </ion-card>
+
+</ion-content>

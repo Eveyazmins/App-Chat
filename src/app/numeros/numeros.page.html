@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/menu"></ion-back-button>
+          </ion-buttons>
+      <ion-title>Numeros</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+
+    <ion-card (click)="cambiarIdioma()"> 
+        <ion-card-header>
+          <ion-card-title>Cambiar Idioma</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <img *ngIf="idioma == 1"  no-margin no-padding src="../../assets/espana.png">
+            <img *ngIf="idioma == 2"  no-margin no-padding src="../../assets/inglaterra.svg">
+            <img *ngIf="idioma == 3"  no-margin no-padding src="../../assets/alemania.svg">
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+          <ion-card-header>
+              <ion-card-title>Elija un numero</ion-card-title>
+            </ion-card-header>
+
+        <ion-card-content>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card (click)="reproducir('uno')">
+        <ion-card-content>
+            <ion-img src="../../assets/1.png"></ion-img>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card (click)="reproducir('dos')">
+          <ion-card-content>
+              <ion-img src="../../assets/2.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card (click)="reproducir('tres')">
+            <ion-card-content>
+                <ion-img src="../../assets/3.png"></ion-img>
+            </ion-card-content>
+          </ion-card>
+
+
+            <ion-card (click)="reproducir('cuatro')">
+                <ion-card-content>
+                    <ion-img src="../../assets/4.png"></ion-img>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card (click)="reproducir('cinco')">
+                  <ion-card-content>
+                      <ion-img src="../../assets/5.png"></ion-img>
+                  </ion-card-content>
+                </ion-card>
+
+</ion-content>

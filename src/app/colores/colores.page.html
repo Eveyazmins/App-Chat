@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/menu"></ion-back-button>
+        </ion-buttons>
+    <ion-title>colores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card (click)="cambiarIdioma()"> 
+        <ion-card-header>
+          <ion-card-title>Cambiar Idioma</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <img *ngIf="idioma == 1"  no-margin no-padding src="../../assets/espana.png">
+            <img *ngIf="idioma == 2"  no-margin no-padding src="../../assets/inglaterra.svg">
+            <img *ngIf="idioma == 3"  no-margin no-padding src="../../assets/alemania.svg">
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+          <ion-card-header>
+              <ion-card-title>Elija un color</ion-card-title>
+            </ion-card-header>
+        <ion-card-content>
+
+            <ion-row  *ngIf="listaColores">
+              <ion-col no-padding no-margin>
+                <ion-button 
+                (click)="reproducir('azul')"
+                size="large" color="primary" expand="full" no-margin responsive-lg>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+
+            <ion-row  *ngIf="listaColores">
+                <ion-col no-padding no-margin>
+                  <ion-button color="danger" (click)="reproducir('rojo')"  size="large" expand="full" no-margin responsive-lg></ion-button>
+                </ion-col>
+              </ion-row>
+
+            <ion-row  *ngIf="listaColores">
+              <ion-col no-padding no-margin>
+                <ion-button color="success" (click)="reproducir('verde')"  size="large" expand="full" no-margin responsive-lg></ion-button>
+              </ion-col>
+            </ion-row>
+
+            <ion-row  *ngIf="listaColores">
+              <ion-col no-padding no-margin>
+                <ion-button color="warning" (click)="reproducir('amarillo')"  size="large" expand="full" no-margin responsive-lg></ion-button>
+              </ion-col>
+            </ion-row>
+
+            <ion-row  *ngIf="listaColores">
+              <ion-col no-padding no-margin>
+                <ion-button color="tertiary" (click)="reproducir('violeta')"  size="large" expand="full" no-margin responsive-lg></ion-button>
+              </ion-col>
+            </ion-row>
+
+        </ion-card-content>
+
+
+      </ion-card>
+
+      
+
+
+
+</ion-content>
+
