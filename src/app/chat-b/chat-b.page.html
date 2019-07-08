@@ -1,9 +1,67 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>chat-b</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-title>División 4B</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  <ion-content padding [scrollEvents]="true">
+  
+    <div class="message-wrap">
+      <div *ngFor="let chat of chats; let last = last">
+  
+        <div class="sender" *ngIf="chat.usuario != usuario.correo">  
+          
+          <ion-grid>
+            <ion-row>
+                <ion-col col-10>
+  
+              <div class="incoming_msg">
+                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> 
+                </div>
+                  <div class="received_msg">
+                    <div class="received_withd_msg">
+                      <p style="font-weight: bold">{{chat.usuario}}</p>
+                      <p>{{chat.texto}}</p>
+                      <span class="time_date">{{chat.hora}}</span>
+  
+                    </div>
+                  </div>
+                </div>
+           
+            
+  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+        </div> <!--Div sender-->
+        
+        <div class="me" *ngIf="chat.usuario == usuario.correo">
+            <ion-grid>
+                <ion-row>
+                  <ion-col col-10>
+          <div class="outgoing_msg">
+            <div class="sent_msg">
+              <p>{{chat.texto}}</p>
+              <span class="time_date">{{chat.hora}}</span>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+        </div> <!-- div me-->
+  
+      </div>
+      </div>
+  </ion-content>
+  
+  
+  <div class="type_msg">
+      <div class="input_msg_write">
+        <input type="text" [(ngModel)]="inputText" name="message" class="write_msg" placeholder="Ingrese su mensaje" />
+        <button class="msg_send_btn" type="button" (click)="doSend()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+        </button>
+      </div>
+  </div>
+  
+  

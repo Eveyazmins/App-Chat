@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController, NavParams } from '@ionic/angular';
 import * as firebase from 'firebase';
 import { ListaUsuarios } from '../../app/enviroment';
+import {IonContent} from '@ionic/angular';
 
 
 @Component({
@@ -11,9 +12,12 @@ import { ListaUsuarios } from '../../app/enviroment';
 })
 export class ChatAPage implements OnInit {
 
+  @ViewChild(IonContent) content: IonContent;
+
   private usuario: any;
   private inputText: string;
 
+  
   constructor() {
     console.log("entro");
     this.usuario = JSON.parse(sessionStorage.getItem('usuario'));
@@ -30,7 +34,12 @@ export class ChatAPage implements OnInit {
   traerChats(){
     this.ref.on('value', resp => {
       this.chats = ListaUsuarios(resp);
+      
+      setTimeout(() => {
+        this.updateScroll();
+    }, 500);
     });
+
   }
 
   doSend(){
@@ -41,6 +50,14 @@ export class ChatAPage implements OnInit {
   }
 
   ngOnInit() {
+
   }
+
+  updateScroll() {
+    if (this.content.scrollToBottom) {
+      this.content.scrollToBottom(400);
+    }
+}
+
 
 }
