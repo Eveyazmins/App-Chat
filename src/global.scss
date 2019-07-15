@@ -11,7 +11,7 @@
 @import '~@ionic/angular/css/flex-utils.css';
 
 *{
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS';
 }
 
 
@@ -91,7 +91,7 @@
   height:550px;
   margin: 6px;
   animation: lds-hourglass 1.2s infinite;
-  border-radius: 50%;
+  border-radius: 0%;
 
   /*
       display: inline-block;
@@ -109,7 +109,7 @@
 .lds-hourglass:after {
   content: " ";
   display: block;
-  border-radius: 50%;
+  border-radius: 0%;
   width: 0;
   height: 0;
   margin: 6px;
@@ -144,7 +144,6 @@
   position: absolute;
   border: 4px solid #cef;
   opacity: 1;
-  border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 .lds-ripple div:nth-child(2) {
